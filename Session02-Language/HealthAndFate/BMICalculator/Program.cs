@@ -14,7 +14,7 @@ internal class Program  //internal means no one/no outside class
     static void Main(string[] args)
     {
         Console.WriteLine("Hello, World!");
-        double bmi = GetBmi(69, 1.72);
+        double bmi = GetBmi(75, 1.75);
         Console.WriteLine("1. Your BMI is: " + bmi);    //CONCATENATE: (ghép chuỗi) by using + operator
         Console.WriteLine("2. Your BMI is: {0}", bmi);  //place holder
         Console.WriteLine("3. Your BMI is: {0} | {1}", bmi, 2024);    // start with 0, 1, 2
@@ -22,10 +22,38 @@ internal class Program  //internal means no one/no outside class
                                                         //runtime try to find out where is the variable
 
         // call a method in another class
-        Console.WriteLine($"5. Your BMI is: {BmiCalculator.GetBmi(69, 1.73)}");
-        
+        Console.WriteLine($"5. Your BMI is: {BmiCalculator.GetBmi(75, 1.75)}");
 
+        // String, string are the same meaning
+        string weightStatus = BmiCalculator.EvaluateHealthStatus(bmi);
+        //Console.WriteLine("You are in 70kg an for now, your weight status:\n{0}", weightStatus);
+        Console.WriteLine($"You are in 70kg and for now, your weight status:\n{weightStatus}");
+
+        //raw string
+        //@ in a leading string will ask the runtime to
+        //who the strign as it appears in the code
+        //waht you type is what you see in the end-user screen
+        //TECHNIQUE: VERBATIM
+        Console.WriteLine(@$"You are in 75kg, 1.75
+and for now,
+<html>
+    <head>
+
+    </...>
+        your weight status: {weightStatus}");
+    
+
+
+
+
+        Console.WriteLine("Press any key to exit..");
+        Console.ReadLine();
     }
+
+
+
+
+
 
     //METHOD HERE
     public static double GetBmi(double weight, double height) => weight / (height * height);
