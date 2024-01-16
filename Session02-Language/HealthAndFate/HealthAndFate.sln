@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMICalculator", "BMICalcula
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math", "Math\Math.csproj", "{10AA5515-9340-40D8-8C37-6EDE3FC6A559}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zodiac", "Zodiac\Zodiac.csproj", "{FCBDE93A-8870-4BEC-BF78-AA3CB5C76DD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{10AA5515-9340-40D8-8C37-6EDE3FC6A559}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10AA5515-9340-40D8-8C37-6EDE3FC6A559}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10AA5515-9340-40D8-8C37-6EDE3FC6A559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCBDE93A-8870-4BEC-BF78-AA3CB5C76DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCBDE93A-8870-4BEC-BF78-AA3CB5C76DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCBDE93A-8870-4BEC-BF78-AA3CB5C76DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCBDE93A-8870-4BEC-BF78-AA3CB5C76DD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

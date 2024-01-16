@@ -31,8 +31,8 @@ internal class Program  //internal means no one/no outside class
 
         //raw string
         //@ in a leading string will ask the runtime to
-        //who the strign as it appears in the code
-        //waht you type is what you see in the end-user screen
+        //who the string as it appears in the code
+        //what you type is what you see in the end-user screen
         //TECHNIQUE: VERBATIM
         Console.WriteLine(@$"You are in 75kg, 1.75
 and for now,
