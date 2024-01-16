@@ -13,7 +13,7 @@ namespace Bmi
             //1.73(m) = 173 - 100 = 73(kg) => 73 is perject!
             if (bmi < 18.5)
                 return "Underweight!";
-            // bmi at  this place may be >= 18.5
+            // bmi at this place may be >= 18.5
             if (bmi < 25)
                 return "You are perfect on in body shape!";
             //bmi >= 25
