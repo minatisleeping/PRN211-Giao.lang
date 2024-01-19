@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BMICalculator\BMICalculator.csproj" />
+    <ProjectReference Include="..\Zodiac\Zodiac.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Zodiac">
+      <HintPath>bin\Debug\net6.0\Zodiac.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
