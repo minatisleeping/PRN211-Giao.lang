@@ -12,7 +12,7 @@ class Program
     static void CreateAStudentObjectV4()
     {
         // style new kiểu mới!!!
-        Student nhat = new (gpa: 8.8, yob: 2002, name: "NhatMM", id: "SE1", email: "nhatmm@fpt.edu.vn" );
+        Student nhat = new (gpa: 8.8, yob: 2001, name: "NhatMM", id: "SE1", email: "nhatmm@fpt.edu.vn" );
 
         nhat.ShowProfile();
     }//chủ động dưa value vào hàm lộn xộn thứ tự, miễn là đi kèm tên biến máy runtime biết để map value cho đúng!!!
