@@ -29,7 +29,6 @@ namespace StudentManager
             //<Student>   <Lecture>
 
             //PlayWithObjectArray();
-            Console.ReadLine();
         }
 
         //CHALLENGE AT HOME:
