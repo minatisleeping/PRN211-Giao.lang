@@ -19,12 +19,28 @@ namespace Services
         // DATA TYPE IS USED  AS A PARAMETER, KĨ THUẬT GENERIC NHƯ BÊN JAVA KHI XÀI LIST, ARRAYLIST
         // Class thiết kể tổng quát với nhiều lại DATA TYPE!!!
 
-        private T[] _list1 = new T[MAX];
+        private T[] _list = new T[MAX];
         private int _count = MIN;
 
-        public void AddObject()
+        public void AddItem(T item)
         {
+            // TODO: check tràn mảng
+            // Mảng FIXED kích thược, cấm vượt biên
+            if (_count >= MAX) {
+                Console.WriteLine("Tràn mảng rùi bạn oiii :( ");
+            }
+            _list[_count] = item;
+            _count++;
+        }
 
+        public void PrintAll()
+        {
+            // chơi với mảng k for đến cuối vì sẽ  gặp trống nếu mảng chưa đầy
+            Console.WriteLine($"There is/are {_count} item(s)  in the list: ");
+            for (int i = 0; i < _count; i++)
+            {
+                Console.WriteLine(_list[i]);
+            }
         }
 
     }
