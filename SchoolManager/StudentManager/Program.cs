@@ -1,4 +1,5 @@
-﻿using StudentManager.Entities;
+﻿
+using StudentManager.Entities;
 using StudentManager.Services;
 
 //in Java: import studentmanager.entities.*; 
@@ -11,24 +12,8 @@ namespace StudentManager
         static void Main(string[] args)
         {
 
-            Cabinet seBox = new Cabinet();
-            Cabinet bizBox = new Cabinet();
-
-            seBox.AddNewProfile("SE1", "An", "an@", 2003, 8.6);
-            seBox.AddNewProfile("SE2", "Binh", "binh@", 2004, 6.8);
-
-            bizBox.AddNewProfile("SS1", "Cuong", "cuong@", 2005, 8.8);
-            bizBox.AddNewProfile("SS2", "Dung", "dung@", 2006, 6.6);
-
-            Console.WriteLine("The Biz students");
-            bizBox.PrintStudentList();
-
-            Console.WriteLine("The SE students");
-            seBox.PrintStudentList();
-
-            //<Student>   <Lecture>
-
-            //PlayWithObjectArray();
+            PlayWithReferenceTypeArray();
+            Console.ReadLine();
         }
 
         //CHALLENGE AT HOME:
@@ -66,37 +51,54 @@ namespace StudentManager
             {
                 Console.WriteLine(arr[i]); //call ToString() in background
             }
-
-
         }
+
+        static void PlayWithReferenceTypeArray()
+        {
+            const int MAX = 30;
+            //Student s1 = new Student();
+            //Student s2 = new Student() { ... };
+
+            Student[] arr = new Student[MAX];
+            arr[0] = new Student();
+            arr[1] = new Student() { Id = "SE15", Name = "An", Email = "an@...", Yob = 2002, Gpa = 10.0 };
+            arr[2] = new Student() { Id = "SE20", Name = "Dung", Email = "dung@...", Yob = 2003, Gpa = 5.8 };
+            arr[3] = new Student() { Id = "SE25", Name = "Binh", Email = "binh@...", Yob = 2004, Gpa = 4.4 };
+            arr[4] = new Student() { Id = "SE30", Name = "Cuong", Email = "cuong@...", Yob = 2005, Gpa = 3.1 };
+
+            Console.WriteLine("FOR");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i] + " ");
+            }
+
+            Console.WriteLine("FOR/EACH");
+            foreach (var o in arr)
+            {
+                Console.WriteLine(o + " ");
+            }
+        }
+
         static void PlayWithValueTypeArrayV2()
         {
-            //we define an array and init all of its values at the same time
-            //Student s = new Student() {Id = "SE1", Name = "An"...};
+            // kĩ thuật khai báo mảng style thứ 2, vẫn cùng kq, vẫn xử lí như nhau, chỉ khác cách gán giá trị
+            int[] arr = { 5, 10, 15, 20, 25, 30, 35, 40, 45, 50}; // new ngầm số phần tử trong mảng, số biến trong mảng ===== số value đc gán, bài này mảng [10]
+                                                                  // gán giá trị ngay khi khai báo mảng
+                                                                  // các biến lẻ trong mang3 sẽ đc gán ngay value, biến-thứ-i[i] = value gì?
 
-            int[] arr = { 5,    10,    15,    20, 25, 30, 35, 40, 45, 50 };
-            //we have an array, we have declared 10 int variables
-            //         arr[0] arr[1] arr[2] arr[3]...
-            //we init, assign the value for each int variable within the array
-            //khai báo biến, gán luôn giá trị cho 10 biến int trong mảng
-            //arr: general variable to manage all of its members, its members also are variables, a list of variables as normal
-
-            //arr: biến má mì, biến mama tổng quản quản lí 10 đứa dưới quyền
-
-            //using for each like in the Math subject (in highschool) to scan the whole of the array,
-            //what ever you declare an array, i dont care how you declare an array, i know that an array is a set of values, i use for each for the array in overall
-            Console.WriteLine("The array has values of");
-            foreach (int x in arr) 
-            {       //int x = arr[0], x = arr[1],  x = arr[2], ...     
-                Console.WriteLine(x); //x will take each of value in array
+            // CÓ ƯU VÀ NHƯỢC CHO MỖI CÁCH KHAI BÁO!!!
+            Console.WriteLine("The array is printed by using traditional FOR:");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
             }
+
+            Console.WriteLine("\n\nThe array is printed by using traditional FOR/EACH:");
             foreach (var x in arr)
-            {       //int x = arr[0], x = arr[1],  x = arr[2], ...     
-                //Console.Write(x + " "); //x will take each of value in array
-                //Console.Write($"{x} ");
+            {
+                //Console.Write(x + " ");
                 Console.Write("{0} ", x);
             }
-
         }
 
         //work with multiple values, multiple objects
@@ -123,6 +125,7 @@ namespace StudentManager
         // String, string, File, Math, Random, Exception, Statement, ArrayList....
         static void PlayWithValueTypeArray()
         {
+            const int MAX = 100;
             //i want to store 10, or 100, 1000 numbers, how???
             //i want to compute the sum of them???
 
@@ -135,7 +138,7 @@ namespace StudentManager
             //2nd answer: DECLARE AN ARRAY, KHAI BÁO SỈ - 1 LẦN ĐC NHIỀU
             //A SET OF, A LIST OF, A BLOCK OF - 1 DÃY      WHOLE SALES: BÁN SỈ
 
-            int[]      arr = new int[100];
+            int[]      arr = new int[MAX];
             //Student  s   = new Student();
             //         s.Id { get; set; }    
             //we have 10 variables already
@@ -155,29 +158,20 @@ namespace StudentManager
             arr[3] = 20;  //a4 = 20
             arr[4] = 25;
 
-            Console.WriteLine("The array has values of: ");
+            //Console.WriteLine("The array has values of: ");
 
-            Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9}", arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9]);
+            //Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9}", arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9]);
 
-            Console.WriteLine($"{arr[0]} {arr[1]} {arr[2]} {arr[3]} {arr[4]} {arr[5]} {arr[6]} {arr[7]} {arr[8]} {arr[9]}");
-
-            Console.WriteLine("The array printed by using traditional for");
+            //Console.WriteLine($"{arr[0]} {arr[1]} {arr[2]} {arr[3]} {arr[4]} {arr[5]} {arr[6]} {arr[7]} {arr[8]} {arr[9]}");
+            
+            Console.WriteLine("The array is printed by using traditional for: ");
             for (int i = 0; i < arr.Length; i++)
             {
-                Console.Write(arr[i] + " ");
-                //Console.Write("{0} ", arr[i]);
+                //Console.Write(arr[i] + " ");
                 //Console.Write($"{arr[i]} ");
+                
+                Console.Write("{0} ", arr[i]);
             }
-
-            //for each, delegate!!!! 
-            //generic ArrayList<Student>
-
-
-
-
-
-
-
         }
 
 
