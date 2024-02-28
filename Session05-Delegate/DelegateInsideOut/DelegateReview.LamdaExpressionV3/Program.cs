@@ -21,7 +21,7 @@ class Program
 
         // HÀM CUỐI CÙNG
         // TÍNH CHU VI TAM GIÁC DỰA TRÊN A B C
-        var fx = (double a, double b, double c) => a + b + c;
+        var fx = (double a, double b, double c) => a + b + c;4566
 
         Console.WriteLine("Chu vi tam giac - Perimeter: ", fx(3, 4, 5));
 
