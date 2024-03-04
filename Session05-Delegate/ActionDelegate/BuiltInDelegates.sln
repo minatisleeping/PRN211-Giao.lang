@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionDelegate", "ActionDel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionGenericDelegate", "..\ActionGenericDelegate\ActionGenericDelegate.csproj", "{0191A0A9-4D41-414E-809E-0B0D5D162E7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuncDelegate", "..\FuncDelegate\FuncDelegate.csproj", "{D6068225-4F4B-409B-9076-6F1B92840CED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0191A0A9-4D41-414E-809E-0B0D5D162E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0191A0A9-4D41-414E-809E-0B0D5D162E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0191A0A9-4D41-414E-809E-0B0D5D162E7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6068225-4F4B-409B-9076-6F1B92840CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6068225-4F4B-409B-9076-6F1B92840CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6068225-4F4B-409B-9076-6F1B92840CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6068225-4F4B-409B-9076-6F1B92840CED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
