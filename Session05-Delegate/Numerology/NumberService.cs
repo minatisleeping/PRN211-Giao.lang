@@ -13,8 +13,30 @@ namespace Numerology
 				//nếu f() check i > 0 mới in, PrintNumbers() chính là hàm in ra các số > 0
 			}
 		}
-		//style cũ: thiết kế đủ các loại hàm cung cấp data! Đủ cỡ nào cũng k là dủ, do nhu cầu tính toán khác nhay trên bộ data:
-		//có người tính chẵn, lẻ, âm, dương, nguyên tố, chia hết 5, chia 10..
+        //style cũ: thiết kế đủ các loại hàm cung cấp data! Đủ cỡ nào cũng k là dủ, do nhu cầu tính toán khác nhay trên bộ data:
+        //có người tính chẵn, lẻ, âm, dương, nguyên tố, chia hết 5, chia 10..
+
+        // Viết hàm dếm cái gì đó trong dãy số trên: đếm chẵn, lẻ, nguyên tố
+        // Nhóm: giành kiểm soát, outsource 1 phần
+        public static void Count1(Predicate<int> f)
+        {
+            int count = 0;
+            foreach (var x in _arr)
+            {
+                if (f(x)) count++;
+            }
+            Console.WriteLine("Count: " + count);
+        }
+
+        public static void Count2(Func<int, bool> f)
+		{
+			int count = 0;
+			foreach (var x in _arr)
+			{
+				if (f(x)) count++;
+			}
+			Console.WriteLine("Count: " + count);
+		}
 	}
 }
 
