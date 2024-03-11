@@ -12,6 +12,12 @@
             {
                 if (number < 0) Console.WriteLine(number);
             });
+
+            // Đếm số dương
+            NumberService.Count1(n => n > 0);
+
+            // Đếm số âm
+            NumberService.Count2(n => n < 0);
         }
     }
 }
