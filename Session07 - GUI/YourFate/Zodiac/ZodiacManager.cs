@@ -46,13 +46,25 @@ namespace Zodiac
 
         public void picImage_Click(object sender, EventArgs e) { }
         public void pnlImage_Paint(object sender, PaintEventArgs e) { }
-        public void btnExit_Click(object sender, EventArgs e) 
+        public void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            // Hỏi xác nhận
+            DialogResult rs =  MessageBox.Show("Are you sure ?", "Warning !!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (rs == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+            
         }
         public void lblDay_Click(object sender, EventArgs e) { }
         public void lblMonth_Click(object sender, EventArgs e) { }
         public void lblYourZodiac_Click(object sender, EventArgs e) { }
 
+        private void txtDay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -160,6 +160,7 @@
             txtDay.Size = new Size(200, 50);
             txtDay.TabIndex = 0;
             txtDay.Text = "1";
+            txtDay.TextChanged += txtDay_TextChanged;
             // 
             // textMonth
             // 
