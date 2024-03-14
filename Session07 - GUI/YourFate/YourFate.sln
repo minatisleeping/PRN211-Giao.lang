@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zodiac", "Zodiac\Zodiac.csproj", "{8E2B8EA1-0C35-4398-8D97-64BC012597DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{84237085-1F22-4FC5-892E-64AA4C4812D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E2B8EA1-0C35-4398-8D97-64BC012597DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E2B8EA1-0C35-4398-8D97-64BC012597DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E2B8EA1-0C35-4398-8D97-64BC012597DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E2B8EA1-0C35-4398-8D97-64BC012597DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84237085-1F22-4FC5-892E-64AA4C4812D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84237085-1F22-4FC5-892E-64AA4C4812D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84237085-1F22-4FC5-892E-64AA4C4812D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84237085-1F22-4FC5-892E-64AA4C4812D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2362E9C-7295-437E-B586-3FA7A43A48A9}
+	EndGlobalSection
+EndGlobal
