@@ -1,0 +1,41 @@
+I. FORM: BIỄU MẪU, CỬA SỔ, HCN CÓ MẶT NỀN
+
+- Là 1 Class Cha có sẵn trong SDK, nó là 1 Class dùng để biểu diễn 1 hcn mà có the633 render và xuất hiện trên DESKTOP
+- 1 cửa sổ trong app của ta là 1 OBJECT thuộc Class Cha FORM
+- Tuy nhiên ta ko dùng trực tiếp Class này mà tạo Class kế thừa Class FORM này, để ta có chỗ độ thêm nhiều thứ từ
+Class gốc
+
+* Trong Project tên là WINDOW FORMS (viết tắt trên mạng là WINFORMS) ta sẽ thấy có 1 Class là con của class
+FORM, ví  dụ:
+
+public partial class Form1 :  Form 
+{
+
+}
+
+public partial class ZodiacGUI : Form 
+{
+	//ta viết code bên trong Class Con này, ứng với việc sau này cửa sổ đc render ra sẽ hoạt động theo cách ta code !!!
+}
+
+* Một Class là 1 cái khuôn, TEMPLATE, bản thiết kế dùng để clone ra những OBJECT tương ứng
+	Student s = new Student(...){...}
+		new ZodiacGUI()
+		new Form1()
+		Sẽ SHOW/RENDER ra DESKTOP cửa sổ HCN có mặt nền
+
+>>>>>> Lần đầu tiên trái thanh long.. Lần đầu tiên 1 OBJECT đc new trong RAM xuất hiện trên DESKTOP - Phần render DESKTOP
+MICROSOFT WINDOWS làm giùm cho mình !!!
+
+>>>>>> Dài, rộng, màu sắc, chữ
+
+
+
+
+
+
+
+
+
+
+
