@@ -142,6 +142,7 @@
             btnCreate.TabIndex = 2;
             btnCreate.Text = "Create a book";
             btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.Click += btnCreate_Click;
             // 
             // btnUpdate
             // 
@@ -185,6 +186,7 @@
             dgvBookList.RowTemplate.Height = 41;
             dgvBookList.Size = new Size(838, 373);
             dgvBookList.TabIndex = 1;
+            dgvBookList.SelectionChanged += dgvBookList_SelectionChanged;
             // 
             // lblCopyright
             // 
