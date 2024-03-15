@@ -12,6 +12,7 @@ namespace BookManagement_NhatMaiMinh
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new BookManagerMainUI());
+            //Application.Run(new BookDetailForm());
         }
     }
 }
