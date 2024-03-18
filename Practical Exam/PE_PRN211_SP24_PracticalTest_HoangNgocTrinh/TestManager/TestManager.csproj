@@ -1,12 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BookManagement_HoangNgocTrinh\BookManagement_HoangNgocTrinh.csproj" />
     <ProjectReference Include="..\Repositories\Repositories.csproj">
       <Private>True</Private>
     </ProjectReference>
