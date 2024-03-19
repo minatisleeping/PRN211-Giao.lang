@@ -1,4 +1,5 @@
-﻿using Repositories.Entities;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using Repositories.Entities;
 using Services;
 using System;
 using System.Collections.Generic;
@@ -59,10 +60,15 @@ namespace BookManagement_HoangNgocTrinh
             //NẾU CÓ SÁCH THÌ FILL VÀO CÁC Ô
             if (SelectedBook != null)
             {
+                //disable BookID
+                txtBookId.Enabled = false; // cấm sửa Id ở mode Edit
                 txtBookId.Text = SelectedBook.BookId.ToString();
                 txtBookName.Text = SelectedBook.BookName;
                 txtDescription.Text = SelectedBook.Description;
-                //...
+                dtpPublicationDate.Text = SelectedBook.PublicationDate.ToString();
+                txtQuantity.Text = SelectedBook.Quantity.ToString();
+                txtPrice.Text = SelectedBook.Price.ToString();
+                txtAuthor.Text = SelectedBook.Author.ToString();
                 cboBookCategoryId.SelectedValue = SelectedBook.BookCategoryId;  //1 2 3 4 5
                 //tuỳ sách có cate gì thì jump đến số đó!!!
 
@@ -74,6 +80,31 @@ namespace BookManagement_HoangNgocTrinh
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            //logic: ta phải tạo ra 1 object Book rồi gửi cho Service
+            //Service chuyển cho Repo
+            //nhớ check mode: edit hay mode new để gọi đúng hàm repo
+            //save xong thì phải đóng cửa sổ này lại
+            //Refresh cái lưới bên kia để thấy data đã xuống db
+            Book b = new Book() 
+            {
+                BookId = int.Parse(txtBookId.Text),
+                BookName = txtBookName.Text,
+                Description = txtDescription.Text,
+                PublicationDate = dtpPublicationDate.Value,
+                Quantity = int.Parse(txtQuantity.Text),
+                Price = double.Parse(txtPrice.Text),
+                Author = txtAuthor.Text,
+                BookCategoryId = int.Parse(cboBookCategoryId.SelectedValue.ToString())
+            };
+
+            BookService service = new();
+            service.UpdateBook(b);
+            Close();
+            //sang kia refresh lưới
         }
     }
 }

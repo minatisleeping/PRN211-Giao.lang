@@ -54,15 +54,16 @@
             // btnSave
             // 
             btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             btnSave.ForeColor = Color.Yellow;
             btnSave.Location = new Point(1784, 205);
-            btnSave.Margin = new Padding(5, 5, 5, 5);
+            btnSave.Margin = new Padding(5);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(306, 82);
             btnSave.TabIndex = 1;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // grbBookInfo
             // 
@@ -82,12 +83,12 @@
             grbBookInfo.Controls.Add(txtBookId);
             grbBookInfo.Controls.Add(lblBookName);
             grbBookInfo.Controls.Add(lblBookID);
-            grbBookInfo.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            grbBookInfo.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             grbBookInfo.ForeColor = Color.Yellow;
             grbBookInfo.Location = new Point(81, 181);
-            grbBookInfo.Margin = new Padding(5, 5, 5, 5);
+            grbBookInfo.Margin = new Padding(5);
             grbBookInfo.Name = "grbBookInfo";
-            grbBookInfo.Padding = new Padding(5, 5, 5, 5);
+            grbBookInfo.Padding = new Padding(5);
             grbBookInfo.Size = new Size(1661, 920);
             grbBookInfo.TabIndex = 0;
             grbBookInfo.TabStop = false;
@@ -97,7 +98,7 @@
             // 
             cboBookCategoryId.FormattingEnabled = true;
             cboBookCategoryId.Location = new Point(476, 818);
-            cboBookCategoryId.Margin = new Padding(5, 5, 5, 5);
+            cboBookCategoryId.Margin = new Padding(5);
             cboBookCategoryId.Name = "cboBookCategoryId";
             cboBookCategoryId.Size = new Size(353, 58);
             cboBookCategoryId.TabIndex = 7;
@@ -106,7 +107,7 @@
             // 
             dtpPublicationDate.Format = DateTimePickerFormat.Short;
             dtpPublicationDate.Location = new Point(476, 522);
-            dtpPublicationDate.Margin = new Padding(5, 5, 5, 5);
+            dtpPublicationDate.Margin = new Padding(5);
             dtpPublicationDate.Name = "dtpPublicationDate";
             dtpPublicationDate.Size = new Size(391, 56);
             dtpPublicationDate.TabIndex = 3;
@@ -114,7 +115,7 @@
             // lblPrice
             // 
             lblPrice.AutoSize = true;
-            lblPrice.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPrice.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lblPrice.ForeColor = Color.Yellow;
             lblPrice.Location = new Point(1147, 621);
             lblPrice.Margin = new Padding(5, 0, 5, 0);
@@ -126,7 +127,7 @@
             // txtAuthor
             // 
             txtAuthor.Location = new Point(476, 718);
-            txtAuthor.Margin = new Padding(5, 5, 5, 5);
+            txtAuthor.Margin = new Padding(5);
             txtAuthor.Name = "txtAuthor";
             txtAuthor.Size = new Size(1128, 56);
             txtAuthor.TabIndex = 6;
@@ -134,7 +135,7 @@
             // txtPrice
             // 
             txtPrice.Location = new Point(1285, 616);
-            txtPrice.Margin = new Padding(5, 5, 5, 5);
+            txtPrice.Margin = new Padding(5);
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(319, 56);
             txtPrice.TabIndex = 5;
@@ -142,7 +143,7 @@
             // txtDescription
             // 
             txtDescription.Location = new Point(476, 288);
-            txtDescription.Margin = new Padding(5, 5, 5, 5);
+            txtDescription.Margin = new Padding(5);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
             txtDescription.ScrollBars = ScrollBars.Vertical;
@@ -152,7 +153,7 @@
             // txtBookName
             // 
             txtBookName.Location = new Point(476, 186);
-            txtBookName.Margin = new Padding(5, 5, 5, 5);
+            txtBookName.Margin = new Padding(5);
             txtBookName.Name = "txtBookName";
             txtBookName.Size = new Size(1128, 56);
             txtBookName.TabIndex = 1;
@@ -160,7 +161,7 @@
             // lblCategory
             // 
             lblCategory.AutoSize = true;
-            lblCategory.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCategory.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lblCategory.ForeColor = Color.Yellow;
             lblCategory.Location = new Point(57, 822);
             lblCategory.Margin = new Padding(5, 0, 5, 0);
@@ -172,7 +173,7 @@
             // lblAuthor
             // 
             lblAuthor.AutoSize = true;
-            lblAuthor.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAuthor.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lblAuthor.ForeColor = Color.Yellow;
             lblAuthor.Location = new Point(57, 723);
             lblAuthor.Margin = new Padding(5, 0, 5, 0);
@@ -184,7 +185,7 @@
             // lblQuantity
             // 
             lblQuantity.AutoSize = true;
-            lblQuantity.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblQuantity.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lblQuantity.ForeColor = Color.Yellow;
             lblQuantity.Location = new Point(57, 621);
             lblQuantity.Margin = new Padding(5, 0, 5, 0);
@@ -196,7 +197,7 @@
             // lblPublicationDate
             // 
             lblPublicationDate.AutoSize = true;
-            lblPublicationDate.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPublicationDate.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lblPublicationDate.ForeColor = Color.Yellow;
             lblPublicationDate.Location = new Point(57, 531);
             lblPublicationDate.Margin = new Padding(5, 0, 5, 0);
@@ -208,7 +209,7 @@
             // lblDescription
             // 
             lblDescription.AutoSize = true;
-            lblDescription.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDescription.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lblDescription.ForeColor = Color.Yellow;
             lblDescription.Location = new Point(57, 293);
             lblDescription.Margin = new Padding(5, 0, 5, 0);
@@ -220,7 +221,7 @@
             // txtQuantity
             // 
             txtQuantity.Location = new Point(476, 616);
-            txtQuantity.Margin = new Padding(5, 5, 5, 5);
+            txtQuantity.Margin = new Padding(5);
             txtQuantity.Name = "txtQuantity";
             txtQuantity.Size = new Size(319, 56);
             txtQuantity.TabIndex = 4;
@@ -228,7 +229,7 @@
             // txtBookId
             // 
             txtBookId.Location = new Point(476, 91);
-            txtBookId.Margin = new Padding(5, 5, 5, 5);
+            txtBookId.Margin = new Padding(5);
             txtBookId.Name = "txtBookId";
             txtBookId.Size = new Size(1128, 56);
             txtBookId.TabIndex = 0;
@@ -236,7 +237,7 @@
             // lblBookName
             // 
             lblBookName.AutoSize = true;
-            lblBookName.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblBookName.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lblBookName.ForeColor = Color.Yellow;
             lblBookName.Location = new Point(57, 190);
             lblBookName.Margin = new Padding(5, 0, 5, 0);
@@ -248,7 +249,7 @@
             // lblBookID
             // 
             lblBookID.AutoSize = true;
-            lblBookID.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblBookID.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lblBookID.ForeColor = Color.Yellow;
             lblBookID.Location = new Point(57, 96);
             lblBookID.Margin = new Padding(5, 0, 5, 0);
@@ -260,7 +261,7 @@
             // lblHeader
             // 
             lblHeader.AutoSize = true;
-            lblHeader.Font = new Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            lblHeader.Font = new Font("Segoe UI", 25.8000011F, FontStyle.Bold);
             lblHeader.ForeColor = Color.Yellow;
             lblHeader.Location = new Point(52, 34);
             lblHeader.Margin = new Padding(5, 0, 5, 0);
@@ -272,10 +273,10 @@
             // btnCancel
             // 
             btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             btnCancel.ForeColor = Color.Yellow;
             btnCancel.Location = new Point(1784, 346);
-            btnCancel.Margin = new Padding(5, 5, 5, 5);
+            btnCancel.Margin = new Padding(5);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(306, 82);
             btnCancel.TabIndex = 2;
@@ -288,12 +289,12 @@
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Red;
-            ClientSize = new Size(2135, 1146);
+            ClientSize = new Size(1859, 1146);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             Controls.Add(grbBookInfo);
             Controls.Add(lblHeader);
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "BookDetailForm";
             Text = "Add | Update a Book";
             Load += BookDetailForm_Load;

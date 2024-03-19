@@ -67,6 +67,11 @@ namespace BookManagement_HoangNgocTrinh
                 //đưa sách sang
                 f.SelectedBook = _selected;
                 f.ShowDialog();
+                //F5 lưới
+                BookService service = new BookService();
+
+                dgvBookList.DataSource = null; //xoá trắng grid
+                dgvBookList.DataSource = service.GetAllBooks();
             }
             else
             {
