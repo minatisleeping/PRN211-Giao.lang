@@ -78,6 +78,7 @@
             txtPassword.Location = new Point(99, 358);
             txtPassword.Margin = new Padding(5);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(355, 38);
             txtPassword.TabIndex = 1;
             // 
@@ -96,7 +97,7 @@
             // 
             lblAppName.AutoSize = true;
             lblAppName.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold);
-            lblAppName.Location = new Point(239, 42);
+            lblAppName.Location = new Point(260, 42);
             lblAppName.Margin = new Padding(5, 0, 5, 0);
             lblAppName.Name = "lblAppName";
             lblAppName.Size = new Size(397, 71);
@@ -134,6 +135,7 @@
             // 
             // LoginForm
             // 
+            AcceptButton = btnLogin;
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
