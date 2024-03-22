@@ -16,5 +16,15 @@ namespace BookStore_HoangNT
         {
             InitializeComponent();
         }
+
+        private void mtbQuantity_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void BookManagerForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
