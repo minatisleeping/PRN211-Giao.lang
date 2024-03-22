@@ -7,23 +7,28 @@ namespace BookManagement_HoangNgocTrinh
     {
 
         //backing field
-        private Book _selected = null; // chờ ai đó nahn61 chọn 1 dòng trong grid/table
+        private BookService _service = new();
+
+        private Book _selected = null; // chờ ai đó nhấn chọn 1 dòng trong grid/table
                                        //thì nó đc gán = cuốn sách đang chọn
                                        //đẩy cuống sách đc chọn sang màn hình update
         public BookManagerMainUI()
         {
             InitializeComponent();
         }
-
+        //hàm private - helper trợ giúp cho các hàm khác
+        //hàm này đổ data  vào grid
+        private void FillDataGridView()
+        {
+            //chắc chắn phải cần có _service gọi hàm của _service, đến lượt Service
+            //gọi Repo | Repo gọi DbContext
+            dgvBookList.DataSource = null; //xoá trắng grid
+            dgvBookList.DataSource = _service.GetAllBooks();
+        }
         public void BookManagerMainUI_Load(object sender, EventArgs e)
         {
-            //gọi Services để cung cấp data vào grid/table
-            BookService service = new BookService();
-
-            dgvBookList.DataSource = null; //xoá trắng grid
-            dgvBookList.DataSource = service.GetAllBooks();
-            //                               hàm I trả về all books
-        }
+            FillDataGridView();
+        }//bad smells Clean Code - Robert C. Martin
 
         private void grbSearchCriteria_Enter(object sender, EventArgs e)
         {
@@ -39,7 +44,7 @@ namespace BookManagement_HoangNgocTrinh
             BookDetailForm f = new BookDetailForm();
             f.ShowDialog(); //render đi em 
             //f.Show(); //nguy hiểm nhen, vì cứ new là có object, cửa sổ mới!!!
-
+            FillDataGridView();
         }
 
         private void dgvBookList_SelectionChanged(object sender, EventArgs e)
@@ -68,10 +73,7 @@ namespace BookManagement_HoangNgocTrinh
                 f.SelectedBook = _selected;
                 f.ShowDialog();
                 //F5 lưới
-                BookService service = new BookService();
-
-                dgvBookList.DataSource = null; //xoá trắng grid
-                dgvBookList.DataSource = service.GetAllBooks();
+                FillDataGridView();
             }
             else
             {
@@ -104,6 +106,24 @@ namespace BookManagement_HoangNgocTrinh
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (_selected != null)
+            {
+                DialogResult answer = MessageBox.Show("Do u really wanna delete this book!?", "Delete confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (answer == DialogResult.No)
+                {
+                    return;
+                }
+                _service.DeleteBook(_selected);
+                FillDataGridView();
+                _selected = null;
+            }
+            else
+                MessageBox.Show("pls select a certain book to delete!", "Select one book", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            
         }
     }
 }

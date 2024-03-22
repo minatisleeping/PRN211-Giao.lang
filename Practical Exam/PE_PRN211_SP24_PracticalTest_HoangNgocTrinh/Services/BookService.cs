@@ -26,18 +26,27 @@ namespace Services
         //tạm thời hard-coded danh sách các cuốn sách trong RAM
         //bữa tới học cách lấy từ DB thực sự
         //lấy xong thì cx phải có n cuốn sách trả về trong RAM
+        private BookRepository _repo = new();
 
         public List<Book> GetAllBooks()
         {
             // gọi Repo đưa data từ db lên
-            BookRepository repo = new BookRepository();
-            return repo.GetBooks();
+            return _repo.GetBooks();
         }
 
         public void UpdateBook(Book b)
         {
-            BookRepository repo = new();
-            repo.UpdateBook(b);
+            _repo.UpdateBook(b);
+        }
+
+        public void DeleteBook(Book b)
+        {
+            _repo.RemoveBook(b);
+        }
+        
+        public void CreateBook(Book b)
+        {
+            _repo.CreateBook(b);
         }
     }
 }

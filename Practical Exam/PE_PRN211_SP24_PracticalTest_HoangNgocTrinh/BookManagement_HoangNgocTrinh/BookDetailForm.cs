@@ -62,6 +62,7 @@ namespace BookManagement_HoangNgocTrinh
             {
                 //disable BookID
                 txtBookId.Enabled = false; // cấm sửa Id ở mode Edit
+                lblHeader.Text = "UPDATE A BOOK..";
                 txtBookId.Text = SelectedBook.BookId.ToString();
                 txtBookName.Text = SelectedBook.BookName;
                 txtDescription.Text = SelectedBook.Description;
@@ -72,6 +73,10 @@ namespace BookManagement_HoangNgocTrinh
                 cboBookCategoryId.SelectedValue = SelectedBook.BookCategoryId;  //1 2 3 4 5
                 //tuỳ sách có cate gì thì jump đến số đó!!!
 
+            } 
+            else
+            {
+                lblHeader.Text = "ADD A NEW BOOK..";
             }
 
 
@@ -102,7 +107,12 @@ namespace BookManagement_HoangNgocTrinh
             };
 
             BookService service = new();
-            service.UpdateBook(b);
+
+            if (SelectedBook != null)
+                service.UpdateBook(b);
+            else
+                service.CreateBook(b);
+
             Close();
             //sang kia refresh lưới
         }

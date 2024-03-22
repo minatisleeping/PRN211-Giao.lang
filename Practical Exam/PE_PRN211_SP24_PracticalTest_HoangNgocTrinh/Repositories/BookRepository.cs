@@ -28,5 +28,22 @@ namespace Repositories
             _hoangNgocTrinhContext.Books.Update(b); //thêm mới là Add(b)
             _hoangNgocTrinhContext.SaveChanges(); // sách đã vào csdl rồi
         }
+
+        public void CreateBook(Book b) //new Book ở đâu đó rồi đẩy xuống đây - do EF chơi với object
+        {
+            _hoangNgocTrinhContext = new();
+            _hoangNgocTrinhContext.Books.Add(b); //thêm mới là Add(b)
+            _hoangNgocTrinhContext.SaveChanges(); // insert  into Book values(..)
+            //có thể bắt thêm lỗi trùng key
+            //ChatGPT: how to handle/capture primary key duplication when using Entity Framework core in C#
+            //in case create new Book in Book Management app
+        }
+
+        public void RemoveBook(Book b) //new Book ở đâu đó rồi đẩy xuống đây - do EF chơi với object
+        {
+            _hoangNgocTrinhContext = new();
+            _hoangNgocTrinhContext.Books.Remove(b); //thêm mới là Add(b)
+            _hoangNgocTrinhContext.SaveChanges(); // == DELETE FROM BOOK WHERE BookId
+        }
     }
 }
