@@ -42,20 +42,21 @@
             // btnLogin
             // 
             btnLogin.BackColor = Color.FromArgb(255, 192, 192);
-            btnLogin.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLogin.Font = new Font("Microsoft Sans Serif", 10.2F);
             btnLogin.Location = new Point(99, 462);
-            btnLogin.Margin = new Padding(5, 5, 5, 5);
+            btnLogin.Margin = new Padding(5);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(358, 70);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "Sign in";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // txtEmail
             // 
-            txtEmail.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.Font = new Font("Microsoft Sans Serif", 10.2F);
             txtEmail.Location = new Point(99, 221);
-            txtEmail.Margin = new Padding(5, 5, 5, 5);
+            txtEmail.Margin = new Padding(5);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(355, 38);
             txtEmail.TabIndex = 0;
@@ -63,7 +64,7 @@
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblEmail.Font = new Font("Microsoft Sans Serif", 10.2F);
             lblEmail.Location = new Point(89, 174);
             lblEmail.Margin = new Padding(5, 0, 5, 0);
             lblEmail.Name = "lblEmail";
@@ -73,9 +74,9 @@
             // 
             // txtPassword
             // 
-            txtPassword.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.Font = new Font("Microsoft Sans Serif", 10.2F);
             txtPassword.Location = new Point(99, 358);
-            txtPassword.Margin = new Padding(5, 5, 5, 5);
+            txtPassword.Margin = new Padding(5);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(355, 38);
             txtPassword.TabIndex = 1;
@@ -83,7 +84,7 @@
             // lblPassword
             // 
             lblPassword.AutoSize = true;
-            lblPassword.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPassword.Font = new Font("Microsoft Sans Serif", 10.2F);
             lblPassword.Location = new Point(93, 317);
             lblPassword.Margin = new Padding(5, 0, 5, 0);
             lblPassword.Name = "lblPassword";
@@ -94,7 +95,7 @@
             // lblAppName
             // 
             lblAppName.AutoSize = true;
-            lblAppName.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAppName.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold);
             lblAppName.Location = new Point(239, 42);
             lblAppName.Margin = new Padding(5, 0, 5, 0);
             lblAppName.Name = "lblAppName";
@@ -113,9 +114,9 @@
             gbLoginForm.Controls.Add(lblEmail);
             gbLoginForm.FlatStyle = FlatStyle.Flat;
             gbLoginForm.Location = new Point(171, 155);
-            gbLoginForm.Margin = new Padding(5, 5, 5, 5);
+            gbLoginForm.Margin = new Padding(5);
             gbLoginForm.Name = "gbLoginForm";
-            gbLoginForm.Padding = new Padding(5, 5, 5, 5);
+            gbLoginForm.Padding = new Padding(5);
             gbLoginForm.Size = new Size(551, 581);
             gbLoginForm.TabIndex = 16;
             gbLoginForm.TabStop = false;
@@ -123,7 +124,7 @@
             // lblSignIn
             // 
             lblSignIn.AutoSize = true;
-            lblSignIn.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSignIn.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold);
             lblSignIn.Location = new Point(190, 37);
             lblSignIn.Margin = new Padding(5, 0, 5, 0);
             lblSignIn.Name = "lblSignIn";
@@ -140,7 +141,7 @@
             Controls.Add(gbLoginForm);
             Controls.Add(lblAppName);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "LoginForm";
