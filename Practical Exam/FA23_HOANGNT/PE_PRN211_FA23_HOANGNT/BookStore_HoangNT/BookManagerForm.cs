@@ -94,13 +94,42 @@ namespace BookStore_HoangNT
                 return;
             }
             _bookService.Delete(id);
-            RefreshData();        }
+            RefreshData();
+        }
 
         private void RefreshData()
         {
             var rs = _bookService.SearchBook(txtKeyword.Text.Trim());
             dgvBookList.DataSource = null;
             dgvBookList.DataSource = rs;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            int id;
+            if (string.IsNullOrWhiteSpace(txtId.Text) || !(int.TryParse(txtId.Text, out id)))
+            {
+                MessageBox.Show("The BookId is invalid! Pls select a row in the grid to edit!", "Invalid BookId", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            BookForm bookForm = new();
+            bookForm.BookId = int.Parse(txtId.Text);
+            bookForm.ShowDialog();
+            RefreshData();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            BookForm bookForm = new();
+            bookForm.BookId = null;
+            bookForm.ShowDialog();
+            RefreshData();
+        }
+
+        private void dgvBookList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -36,5 +36,10 @@ namespace BookStore_HoangNT
             bookMgt.Show();
             this.Hide();
         }
+
+        private void gbLoginForm_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
