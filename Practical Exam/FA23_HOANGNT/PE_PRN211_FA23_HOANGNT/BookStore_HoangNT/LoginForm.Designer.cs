@@ -121,6 +121,7 @@
             gbLoginForm.Size = new Size(551, 581);
             gbLoginForm.TabIndex = 16;
             gbLoginForm.TabStop = false;
+            gbLoginForm.Enter += gbLoginForm_Enter;
             // 
             // lblSignIn
             // 

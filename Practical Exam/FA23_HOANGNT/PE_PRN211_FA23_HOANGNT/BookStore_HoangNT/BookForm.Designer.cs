@@ -30,6 +30,8 @@
         {
             lblFormTitle = new Label();
             gbBookInfo = new GroupBox();
+            txtPrice = new TextBox();
+            txtQuantity = new TextBox();
             cboCategory = new ComboBox();
             dtpReleasedDate = new DateTimePicker();
             txtAuthor = new TextBox();
@@ -46,22 +48,20 @@
             lblId = new Label();
             btnCancel = new Button();
             btnSave = new Button();
-            txtPrice = new TextBox();
-            txtQuantity = new TextBox();
             gbBookInfo.SuspendLayout();
             SuspendLayout();
             // 
             // lblFormTitle
             // 
             lblFormTitle.AutoSize = true;
-            lblFormTitle.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFormTitle.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold);
             lblFormTitle.ForeColor = Color.Yellow;
             lblFormTitle.Location = new Point(86, 29);
             lblFormTitle.Margin = new Padding(5, 0, 5, 0);
             lblFormTitle.Name = "lblFormTitle";
-            lblFormTitle.Size = new Size(482, 71);
+            lblFormTitle.Size = new Size(437, 71);
             lblFormTitle.TabIndex = 21;
-            lblFormTitle.Text = "Add/Update Book";
+            lblFormTitle.Text = "Add a new book";
             // 
             // gbBookInfo
             // 
@@ -83,19 +83,33 @@
             gbBookInfo.Controls.Add(lblId);
             gbBookInfo.ForeColor = Color.Yellow;
             gbBookInfo.Location = new Point(86, 162);
-            gbBookInfo.Margin = new Padding(5, 5, 5, 5);
+            gbBookInfo.Margin = new Padding(5);
             gbBookInfo.Name = "gbBookInfo";
-            gbBookInfo.Padding = new Padding(5, 5, 5, 5);
+            gbBookInfo.Padding = new Padding(5);
             gbBookInfo.Size = new Size(835, 712);
             gbBookInfo.TabIndex = 22;
             gbBookInfo.TabStop = false;
             gbBookInfo.Text = " Book Info ";
             // 
+            // txtPrice
+            // 
+            txtPrice.Location = new Point(567, 477);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(200, 39);
+            txtPrice.TabIndex = 9;
+            // 
+            // txtQuantity
+            // 
+            txtQuantity.Location = new Point(215, 476);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(200, 39);
+            txtQuantity.TabIndex = 8;
+            // 
             // cboCategory
             // 
             cboCategory.FormattingEnabled = true;
             cboCategory.Location = new Point(213, 629);
-            cboCategory.Margin = new Padding(5, 5, 5, 5);
+            cboCategory.Margin = new Padding(5);
             cboCategory.Name = "cboCategory";
             cboCategory.Size = new Size(571, 40);
             cboCategory.TabIndex = 7;
@@ -105,7 +119,7 @@
             dtpReleasedDate.CustomFormat = "dd/MM/yyyy";
             dtpReleasedDate.Format = DateTimePickerFormat.Custom;
             dtpReleasedDate.Location = new Point(213, 402);
-            dtpReleasedDate.Margin = new Padding(5, 5, 5, 5);
+            dtpReleasedDate.Margin = new Padding(5);
             dtpReleasedDate.Name = "dtpReleasedDate";
             dtpReleasedDate.Size = new Size(244, 39);
             dtpReleasedDate.TabIndex = 3;
@@ -113,7 +127,7 @@
             // txtAuthor
             // 
             txtAuthor.Location = new Point(213, 549);
-            txtAuthor.Margin = new Padding(5, 5, 5, 5);
+            txtAuthor.Margin = new Padding(5);
             txtAuthor.Name = "txtAuthor";
             txtAuthor.Size = new Size(571, 39);
             txtAuthor.TabIndex = 6;
@@ -121,7 +135,7 @@
             // txtDescription
             // 
             txtDescription.Location = new Point(213, 205);
-            txtDescription.Margin = new Padding(5, 5, 5, 5);
+            txtDescription.Margin = new Padding(5);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
             txtDescription.ScrollBars = ScrollBars.Vertical;
@@ -131,7 +145,7 @@
             // txtName
             // 
             txtName.Location = new Point(213, 138);
-            txtName.Margin = new Padding(5, 5, 5, 5);
+            txtName.Margin = new Padding(5);
             txtName.Name = "txtName";
             txtName.Size = new Size(571, 39);
             txtName.TabIndex = 1;
@@ -141,7 +155,7 @@
             txtId.BackColor = SystemColors.ControlLightLight;
             txtId.BorderStyle = BorderStyle.FixedSingle;
             txtId.Location = new Point(213, 69);
-            txtId.Margin = new Padding(5, 5, 5, 5);
+            txtId.Margin = new Padding(5);
             txtId.Name = "txtId";
             txtId.Size = new Size(202, 39);
             txtId.TabIndex = 0;
@@ -232,38 +246,26 @@
             btnCancel.BackColor = Color.FromArgb(192, 0, 0);
             btnCancel.ForeColor = Color.Yellow;
             btnCancel.Location = new Point(769, 904);
-            btnCancel.Margin = new Padding(5, 5, 5, 5);
+            btnCancel.Margin = new Padding(5);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(153, 46);
             btnCancel.TabIndex = 1;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSave
             // 
             btnSave.BackColor = Color.FromArgb(192, 0, 0);
             btnSave.ForeColor = Color.Yellow;
             btnSave.Location = new Point(588, 904);
-            btnSave.Margin = new Padding(5, 5, 5, 5);
+            btnSave.Margin = new Padding(5);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(153, 46);
             btnSave.TabIndex = 0;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = false;
-            // 
-            // txtPrice
-            // 
-            txtPrice.Location = new Point(567, 477);
-            txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(200, 39);
-            txtPrice.TabIndex = 9;
-            // 
-            // txtQuantity
-            // 
-            txtQuantity.Location = new Point(215, 476);
-            txtQuantity.Name = "txtQuantity";
-            txtQuantity.Size = new Size(200, 39);
-            txtQuantity.TabIndex = 8;
+            btnSave.Click += btnSave_Click;
             // 
             // BookForm
             // 
@@ -276,12 +278,13 @@
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "BookForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add | Update Book";
+            Load += BookForm_Load;
             gbBookInfo.ResumeLayout(false);
             gbBookInfo.PerformLayout();
             ResumeLayout(false);
