@@ -297,6 +297,7 @@
             btnDelete.TabIndex = 2;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnUpdate
             // 
@@ -345,6 +346,7 @@
             btnSearch.TabIndex = 1;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // dgvBookList
             // 
@@ -358,6 +360,7 @@
             dgvBookList.RowTemplate.Height = 29;
             dgvBookList.Size = new Size(718, 675);
             dgvBookList.TabIndex = 0;
+            dgvBookList.SelectionChanged += dgvBookList_SelectionChanged;
             // 
             // lblBookList
             // 

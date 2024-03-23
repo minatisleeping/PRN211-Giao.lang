@@ -16,5 +16,16 @@ namespace Services
         {
             return _repo.GetAll();
         }
+
+        public List<Book> SearchBook(string keyword)
+        {
+            return _repo.GetAll().Where(b => b.BookName.ToLower().Contains(keyword.ToLower()) ||
+                                             b.Description.ToLower().Contains(keyword.ToLower())).ToList();
+        }
+
+        public void Delete(int id)
+        {
+            _repo.Delete(id);
+        }
     }
 }

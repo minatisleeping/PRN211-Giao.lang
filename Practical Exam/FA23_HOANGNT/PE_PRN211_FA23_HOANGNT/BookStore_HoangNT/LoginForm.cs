@@ -32,7 +32,6 @@ namespace BookStore_HoangNT
             }
 
             // đi được tới đây thì ngon rồi
-
             BookManagerForm bookMgt = new();
             bookMgt.Show();
             this.Hide();
